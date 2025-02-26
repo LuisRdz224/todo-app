@@ -6,6 +6,13 @@ export const TodoGrid = ({ tasks }) => {
         <div>
             <div className="container">
                 <div className="row flex-column">
+                    {tasks.length === 0 && (
+                        <div
+                            key={'not-task'}
+                            className="col mb-3 d-flex align-items-center">
+                            <p className="text-center">No tasks available</p>
+                        </div>
+                    )}
                     {tasks.map((task, index) => (
                         <div
                             key={index}

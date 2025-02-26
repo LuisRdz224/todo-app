@@ -18,7 +18,7 @@ export const TodoInput = ({ onNewTodo }) => {
     return (
         <>
             <form onSubmit={handleAddTodoSubmit}>
-                <div className="input-group mb-3">
+                <div className="container input-group mb-3">
                     <input
                         type="text"
                         className="form-control"

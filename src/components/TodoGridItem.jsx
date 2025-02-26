@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
+import { CustomCheckbox } from './CustomCheckbox'
 
 export const TodoGridItem = ({ newTask }) => {
     const [isCompleted, setIsCompleted] = useState(false)
@@ -10,11 +11,9 @@ export const TodoGridItem = ({ newTask }) => {
 
     return (
         <>
-            <input
-                type="checkbox"
+            <CustomCheckbox
                 checked={isCompleted}
                 onChange={handleCheckboxChange}
-                style={{ marginRight: '10px' }}
             />
             <p
                 style={{

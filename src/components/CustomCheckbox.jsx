@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export const CustomCheckbox = ({ checked, onChange }) => {
     return (
-        <StyledWrapper>
+        <StyledWrapper className="col-1">
             <label className="container">
                 <input type="checkbox" checked={checked} onChange={onChange} />
                 <div className="checkmark" />

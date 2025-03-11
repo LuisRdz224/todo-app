@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { CustomCheckbox } from './CustomCheckbox'
+import './styles/TodoGridItem.css'
 
 export const TodoGridItem = ({ newTask }) => {
     const [isCompleted, setIsCompleted] = useState(false)
@@ -15,11 +16,7 @@ export const TodoGridItem = ({ newTask }) => {
                 checked={isCompleted}
                 onChange={handleCheckboxChange}
             />
-            <p
-                style={{
-                    textDecoration: isCompleted ? 'line-through' : 'none',
-                    margin: 0
-                }}>
+            <p className={` col task ${isCompleted ? 'completed' : ''}`}>
                 {newTask}
             </p>
         </>
